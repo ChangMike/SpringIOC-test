@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- 使用有参的构造方法实例化bean -->
+    <!-- 构造方法传入国王名字和皇冠，两个setter方法传入将军实例和出征地点 -->
+    <bean id="HanWudi" class="com.test.spring.KingImpl">
+        <constructor-arg value="汉武帝"/>
+        <constructor-arg ref="imperialCrown"/>
+        <property name="general" ref="HuQubing"/>
+        <property name="placeName" value="楼兰"/>
+    </bean>
+    <!-- 构造方法传入名字和宝剑，setter方法传入盔甲和战马 -->
+    <bean id="HuQubing" class="com.test.spring.GeneralImpl"
+          c:_0="霍去病"
+          c:_1-ref="sword"
+          p:corselet-ref="corselet"
+          p:horse="汉血宝马"/>
+    <!-- 下面的bean使用无参的构造方法实例化 -->
+    <!-- 皇冠 -->
+    <bean id="imperialCrown" class="com.test.spring.ImperialCrown"/>
+    <!-- 宝剑 -->
+    <bean id="sword" class="com.test.spring.Sword"/>
+    <!-- 盔甲 -->
+    <bean id="corselet" class="com.test.spring.Corselet"/>
+</beans>

@@ -1,10 +1,13 @@
 #### xml方式配置IOC
 1. 控制反转
 - 在bean标签里使用constructor-arg属性使用有参的构造方法实例化bean
+<details>
+ <summary>id和name</summary>
   - id的命名需要满足XML对id的命名规范，必须以字母开头
   - name属性几乎可以使用任何特殊字符
   - 如果id和name都没有指定，自动将全限定类名作为bean的名称
   - 如果有多个name相同的bean，使用getBean(beanName)获取Bean时，将返回后面声明的那个bean。所以为了避免无意间的覆盖，应尽量使用id
+</details>
 <details>
  <summary>入参顺序</summary>
 

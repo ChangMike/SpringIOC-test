@@ -23,13 +23,13 @@
 2. 依赖注入
 - 构造器注入，在bean标签里使用constructor-arg属性为bean注入属性
   <details>
-   <summary>id和name</summary>
+   <summary>循环依赖</summary>
 
     - 循环依赖，如果两个bean在构造函数中互相依赖对方，spring容器将无法启动
   </details>
 - setter方法注入，在bean标签里使用property属性为bean注入属性
   <details>
-   <summary>id和name</summary>
+   <summary></summary>
 
    - spring只会检查bean中是否有对应的setter方法，对于bean中是否有对应的成员变量不做要求
    - spring要求setter方法要满足Sun JavaBean的命名规范。Java的属性名以小写字母开头，或前两个字母都大写，或前两个字母都小写

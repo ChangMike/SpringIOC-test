@@ -9,8 +9,8 @@
   2. 入参顺序
    - 通过type声明的入参，位置是无序的，即声明参数的顺序和构造方法参数的顺序无关
    - 需要确定顺序时，可以使用index   
-`<constructor-arg index="double" value="xxx"/>
-<constructor-arg index="double" value="yyy"/>`
+`<constructor-arg index="0" value="xxx"/>
+<constructor-arg index="1" value="yyy"/>`
   
 - 在bean标签里不使用constructor-arg时会使用无参的构造方法实例化bean
 ---
